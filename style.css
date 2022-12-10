@@ -1,0 +1,120 @@
+.navbar {
+    --bs-navbar-padding-y: 0.5rem;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+#intro {
+    background-image: url(/Images/mountains2.jpg);
+    background-size: cover;
+
+}
+
+/* TODO: fix image size */
+#ashley-pic {
+    width: 40%;
+    height: auto;
+}
+
+.intro-section {
+    text-align: center;
+}
+
+.intro-section h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+    text-transform: none;
+}
+
+.intro-section h1 {
+    font-size: 5rem;
+
+}
+
+.intro-section h2 {
+    font-size: 3rem;
+}
+
+.intro-section h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    /* text-transform: none; */
+}
+
+h4 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: normal;
+}
+
+.text_1 {
+    animation: text1;
+}
+
+.text_2 {
+    animation: text2;
+}
+
+.text_1,
+.text_2 {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation-duration: 15s;
+    animation-timing-function: steps(25, end);
+    animation-iteration-count: infinite;
+}
+
+.text_1::after,
+.text_2::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+}
+
+@keyframes text2 {
+
+    0%,
+    50%,
+    100% {
+        width: 0;
+    }
+
+    60%,
+    90% {
+        width: 9em;
+    }
+}
+
+@keyframes text1 {
+
+    0%,
+    50%,
+    100% {
+        width: 0;
+    }
+
+    10%,
+    40% {
+        width: 13em;
+    }
+}
+
+@keyframes caret {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
