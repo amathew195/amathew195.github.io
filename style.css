@@ -2,26 +2,30 @@
     --bs-navbar-padding-y: 0.5rem;
 }
 
-section {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-}
-
 #intro {
     background-image: url(/Images/mountains2.jpg);
     background-size: cover;
 
 }
 
+.self-image {
+    position: relative;
+}
+
 /* TODO: fix image size */
 #ashley-pic {
-    width: 40%;
+    width: 85%;
     height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .intro-section {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
 }
 
 .intro-section h1,
@@ -50,71 +54,101 @@ h4 {
     letter-spacing: normal;
 }
 
-.text_1 {
-    animation: text1;
+.about {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.text_2 {
-    animation: text2;
+.skills {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
 }
 
-.text_1,
-.text_2 {
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
+.skills .col-md-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skills img {
+    width: 70%;
+}
+
+.skills h6 {
+    text-align: center;
+}
+
+.carousel {
+    width: 100%;
+    box-shadow: 5px 5px 5px grey;
+    border: 0.1px black solid;
+}
+
+.jobly-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.jobly-title {
     position: relative;
-    animation-duration: 15s;
-    animation-timing-function: steps(25, end);
-    animation-iteration-count: infinite;
+    bottom: 15px;
 }
 
-.text_1::after,
-.text_2::after {
-    content: "|";
+.section-header {
+    position: relative;
+    top: 100px;
+}
+
+.projects {
+    margin-top: 150px;
+}
+
+.swiper {
+    width: 100%;
+    height: 200px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+.swiper-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination {
     position: absolute;
-    right: 0;
-    animation: caret infinite;
-    animation-duration: 1s;
-    animation-timing-function: steps(1, end);
-}
-
-@keyframes text2 {
-
-    0%,
-    50%,
-    100% {
-        width: 0;
-    }
-
-    60%,
-    90% {
-        width: 9em;
-    }
-}
-
-@keyframes text1 {
-
-    0%,
-    50%,
-    100% {
-        width: 0;
-    }
-
-    10%,
-    40% {
-        width: 13em;
-    }
-}
-
-@keyframes caret {
-
-    0%,
-    100% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
+    bottom: 20px;
 }
