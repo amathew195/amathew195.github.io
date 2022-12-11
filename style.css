@@ -3,16 +3,16 @@
 }
 
 #intro {
-    background-image: url(/Images/mountains2.jpg);
+    background-image: url(Images/mountains2.jpg);
     background-size: cover;
 
 }
 
+/*************** About Me ****************/
 .self-image {
     position: relative;
 }
 
-/* TODO: fix image size */
 #ashley-pic {
     width: 85%;
     height: auto;
@@ -60,27 +60,38 @@ h4 {
     min-height: 100vh;
 }
 
+/****************** Skills *********************/
 .skills {
-    min-height: 50vh;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    margin-top: 100px;
 }
 
-.skills .col-md-2 {
+/* .skills .col-md-2 {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+} */
+
+.dev-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 13%;
+    row-gap: 5px;
 }
 
-.skills img {
-    width: 70%;
+.dev-icons img {
+    height: 100px;
 }
 
-.skills h6 {
-    text-align: center;
-}
-
+/****************** Projects *********************/
 .carousel {
     width: 100%;
     box-shadow: 5px 5px 5px grey;
@@ -101,12 +112,11 @@ h4 {
 }
 
 .section-header {
-    position: relative;
-    top: 100px;
+    padding-top: 100px;
 }
 
 .projects {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .swiper {
