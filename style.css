@@ -61,6 +61,7 @@ h4 {
 
 /****************** Skills *********************/
 .skills {
+    min-height: 60vh;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -69,6 +70,7 @@ h4 {
     column-gap: 10px;
     margin-top: 100px;
     row-gap: 15px;
+    align-content: flex-start;
 }
 
 .dev-icons {
@@ -82,6 +84,10 @@ h4 {
 
 .dev-icons img {
     height: 100px;
+}
+
+.dev-icons h6 {
+    text-align: center;
 }
 
 /****************** Projects *********************/
